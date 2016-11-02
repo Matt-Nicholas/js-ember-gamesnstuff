@@ -7,5 +7,5 @@ export default DS.Model.extend({
   quantity: DS.attr(),
   condition: DS.attr(),
   genre: DS.attr(),
-  image: DS.attr(),
+  image: DS.attr()
 });

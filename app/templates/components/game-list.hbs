@@ -7,7 +7,15 @@
   <div class="game-div">
     {{#link-to 'game' game.id}}
     <h4>{{game.title}}</h4>
-    <img src="{{game.image}}">
+    <div class="game-image">
+      {{out-of-stock game}}
+      <!-- <img class="game-box"src="{{game.image}}">
+      {{#unless game.quantity}}
+      <div class="game-out">
+        <img class="out-of-stock" src="assets/images/out-of-stock.png">
+      </div>
+      {{/unless}} -->
+    </div>
     {{/link-to}}
     <h5><strong>${{game.price}}</strong></h5>
     {{#if game.quantity}}
