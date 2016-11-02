@@ -1,0 +1,32 @@
+@import "bootstrap";
+
+
+.game-list-div{
+  column-count: 3;
+  column-gap: normal;
+  text-align: center;
+}
+
+.game-div{
+  min-height: 450px;
+  border: 1px solid gray;
+  -webkit-column-break-inside: avoid;
+
+}
+
+img{
+  border: 5px solid lightgreen;
+}
+
+.cart-link{
+  text-align: right;
+  font-size: 30px;
+}
+
+.in-stock{
+  color: green;
+}
+
+.out-stock{
+  color: red;
+}

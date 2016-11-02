@@ -1,0 +1,5 @@
+{{#if adminControl.loggedIn}}
+{{game-admin game=game update='update' destroyRecord='destroyRecord'}}
+{{else}}
+{{game-user game=game sellGame='sellGame'}}
+{{/if}}

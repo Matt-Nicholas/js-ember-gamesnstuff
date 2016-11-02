@@ -1,0 +1,5 @@
+{{#each games as |game|}}
+  <hr>
+  {{#link-to 'game' game.id}}{{game.title}}{{/link-to}}
+  <hr>
+{{/each}}

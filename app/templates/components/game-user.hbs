@@ -1,0 +1,20 @@
+<div class="cart-link">
+  {{#link-to 'cart'}}Cart({{shoppingCart.items.length}}){{/link-to}}
+</div>
+{{#if game.quantity}}
+<p class="in-stock">In-stock</p>
+{{else}}
+<p class="out-stock">Out-of-Stock</p>
+{{/if}}
+<div class="game-detail">
+  Title: {{game.title}}<br>
+  <img src="{{game.image}}"><br>
+  Description: {{game.description}}<br>
+  Price: ${{game.price}}<br>
+  Genre: {{game.genre}}<br>
+  Condition: {{game.condition}}<br>
+</div>
+
+{{#if game.quantity}}
+  <button {{action 'addToCart' game}}>Buy this shit</button>
+{{/if}}

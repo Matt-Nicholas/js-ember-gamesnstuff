@@ -1,0 +1,18 @@
+<div class="cart-link">
+  {{#link-to 'cart'}}Cart({{shoppingCart.items.length}}){{/link-to}}
+</div>
+
+<div class="game-list-div">
+  {{#each games as |game|}}
+  <div class="game-div">
+    {{#link-to 'game' game.id}}
+    <h4>{{game.title}}</h4>
+    <img src="{{game.image}}">
+    {{/link-to}}
+    <h5><strong>${{game.price}}</strong></h5>
+    {{#if game.quantity}}
+      <button {{action 'addToCart' game}}>Buy this shit</button>
+    {{/if}}
+  </div>
+  {{/each}}
+</div>

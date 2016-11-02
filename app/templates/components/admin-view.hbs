@@ -1,0 +1,7 @@
+{{#if adminControl.loggedIn}}
+  {{admin-log logOut='logOut' logIn='logIn'}}
+  {{admin-game-list games=model}}
+  {{new-game saveGame='saveGame'}}
+{{else}}
+  {{admin-log}}
+{{/if}}

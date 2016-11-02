@@ -1,0 +1,38 @@
+<div class="update-game-form">
+  {{#if updateGameForm}}
+  <div>
+    <form  {{action 'update' game on="submit" }}>
+      <div class="form-group">
+        <label for="title">Title</label>
+        {{input value=game.title id="title"}}
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        {{textarea value=game.description id="description"}}
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        {{input value=game.price id="price"}}
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        {{input value=game.quantity id="quantity"}}
+      </div>
+      <div class="form-group">
+        <label for="condition">Condition</label>
+        {{textarea value=game.condition id="condition"}}
+      </div>
+      <div class="form-group">
+        <label for="genre">Genre</label>
+        {{input value=game.genre id="genre"}}
+      </div>
+      <button type="submit">Save</button>
+      <button {{action 'delete' game}}>Delete Game</button>
+    </form>
+  </div>
+  {{else}}
+  <div class="update-game-button">
+    <button {{action 'updateGameForm'}}>Update Game</button>
+  </div>
+  {{/if}}
+</div>
